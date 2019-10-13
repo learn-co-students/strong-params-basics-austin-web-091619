@@ -46,7 +46,7 @@ The same error would occur if you were trying to update a record. So how do we f
 # app/controllers/posts_controller.rb
 
 def create
-  @post = Post.new(params.require(:post).permit(:title, :))
+  @post = Post.new(params.require(:post).permit(:title, :description))
   @post.save
   redirect_to post_path(@post)
 end
